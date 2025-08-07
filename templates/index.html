@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himanshu Kumar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        header .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #00ffff;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 1.5px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ffff;
+        }
+        header h1 a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+        section {
+            background: white;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        ul.skills-grid {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            padding: 0;
+        }
+        ul.skills-grid li a {
+            text-decoration: none;
+            color: #2a2a2a;
+            font-weight: bold;
+            background: #e6f0ff;
+            padding: 10px;
+            border-radius: 8px;
+            display: block;
+            text-align: center;
+        }
+        .project-card-container, .card-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .project-card, .contact-card {
+            background: #f9f9f9;
+            border-left: 5px solid #4b6cb7;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        .project-card:hover, .contact-card:hover {
+            transform: scale(1.02);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #222;
+        }
+        .project-card p, .contact-card p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .project-card a, .contact-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #4b6cb7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-card a:hover, .contact-card a:hover {
+            text-decoration: underline;
+        }
+        .connect-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 10px;
+            border: 2px solid #000000;
+        }
+
+        .connect-btn:hover {
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+
+        ion-icon {
+            vertical-align: middle;
+            margin-right: 6px;
+            color: #4b6cb7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-card">
+            <img src="{{ url_for('static', filename='himanshu.jpg') }}" alt="Himanshu Kumar">
+            <h1><a href="https://linkedin.com/in/himanshu-kumar231204" target="_blank">Himanshu Kumar</a></h1>
+            <p>Crafting intelligent solutions with Python, ML, and Data Science to turn data into real-world impact.</p>
+        </div>
+    </header>
+
+    <section>
+        <h2>🧠 Skills</h2>
+        <ul class="skills-grid">
+            <li><a href="https://docs.python.org/3/" target="_blank">Python</a></li>
+            <li><a href="https://pandas.pydata.org/docs/" target="_blank">Pandas</a></li>
+            <li><a href="https://numpy.org/doc/" target="_blank">NumPy</a></li>
+            <li><a href="https://matplotlib.org/stable/contents.html" target="_blank">Matplotlib</a></li>
+            <li><a href="https://scikit-learn.org/stable/documentation.html" target="_blank">Scikit-learn</a></li>
+            <li><a href="https://git-scm.com/doc" target="_blank">Git & GitHub</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Statistics" target="_blank">Statistics</a></li>
+            <li><a href="https://www.geeksforgeeks.org/exploratory-data-analysis/" target="_blank">EDA</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">ML Algorithms</a></li>
+            <li><a href="https://seaborn.pydata.org/" target="_blank">Data Visualization</a></li>
+            <li><a href="https://jupyter.org/documentation" target="_blank">Jupyter</a></li>
+            <li><a href="https://www.w3schools.com/sql/" target="_blank">SQL</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📘 Core Subjects (GATE)</h2>
+        <ul class="skills-grid">
+            <li><a href="#">DSA</a></li>
+            <li><a href="#">Computer Networks</a></li>
+            <li><a href="#">Operating System</a></li>
+            <li><a href="#">DBMS</a></li>
+            <li><a href="#">Digital Logic</a></li>
+            <li><a href="#">Computer Organization</a></li>
+            <li><a href="#">Theory of Computation</a></li>
+            <li><a href="#">Compiler Design</a></li>
+            <li><a href="#">Discrete Mathematics</a></li>
+            <li><a href="#">Engineering Mathematics</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📂 Projects</h2>
+        <div class="project-card-container">
+            <div class="project-card">
+                <h3>📊 Probability & Statistics for AI/ML</h3>
+                <p>A comprehensive notebook covering mean, variance, probability, and hypothesis testing techniques essential for ML modeling.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>🔍 Exploratory Data Analysis (EDA)</h3>
+                <p>EDA performed on complex real-world data using Pandas and Seaborn to visualize and extract useful insights for predictive analysis.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>🧪 ML Model Pipeline</h3>
+                <p>Created an end-to-end ML pipeline from data cleaning to evaluation, showcasing automation and reproducibility in ML workflow.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>📈 Data Visualization Dashboard</h3>
+                <p>Built dashboards with visual charts and plots for analytics reporting using Matplotlib and Seaborn.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><ion-icon name="barbell-outline"></ion-icon> LeetCode & Codeforces</h2>
+        <div class="card-section">
+            <div class="contact-card">
+                <p><ion-icon name="flash-outline"></ion-icon>150+ problems solved | Active 5⭐ Coder</p>
+                <a href="https://leetcode.com/u/hkkumar690/" target="_blank">LeetCode Profile</a>
+            </div>
+            <div class="contact-card">
+                <p><ion-icon name="trophy-outline"></ion-icon>Competitive Programming</p>
+                <a href="https://codeforces.com/profile/BitYodha" target="_blank">Codeforces: BitYodha</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section>
+        <h2><ion-icon name="document-text-outline"></ion-icon> Resume</h2>
+        <div class="card-section">
+            <div class="contact-card">
+                <p>📝 Download My Resume</p>
+                <a class="connect-btn" href="{{ url_for('static', filename='Himanshu_Kumar_Resume.pdf') }}" download>View Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📬 Connect with Me</h2>
+        <div class="card-section">
+            <div class="contact-card">
+                <p>📧 Email</p>
+                <a class="connect-btn" href="mailto:himanshu231204@gmail.com">Send Email</a>
+            </div>
+            <div class="contact-card">
+                <p>🐙 GitHub</p>
+                <a class="connect-btn" href="https://github.com/himanshu231204" target="_blank">Visit GitHub</a>
+            </div>
+            <div class="contact-card">
+                <p>🔗 LinkedIn</p>
+                <a class="connect-btn" href="https://www.linkedin.com/in/himanshu-kumar-b289b226b/" target="_blank">View LinkedIn</a>
+            </div>
+            <div class="contact-card">
+                <p>📸 Instagram</p>
+                <a class="connect-btn" href="https://instagram.com/itz.hk23" target="_blank">Follow on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2><ion-icon name="school-outline"></ion-icon> Certifications</h2>
+        <div class="card-section">
+            <div class="contact-card">
+                <p>📚 Google Data Analytics (In Progress)</p>
+            </div>
+            <div class="contact-card">
+                <p>🧠 Machine Learning with Python (Coming Soon)</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
