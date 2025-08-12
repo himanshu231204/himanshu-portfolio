@@ -7,135 +7,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: white;
-        }
-        header .profile-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid #00ffff;
-        }
-        header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 0;
-            letter-spacing: 1.5px;
-            font-family: 'Courier New', Courier, monospace;
-            color: #00ffff;
-        }
-        header h1 a {
-            color: #00ffff;
-            text-decoration: none;
-        }
-        header p {
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            font-style: italic;
-            color: #e0e0e0;
-        }
-        section {
-            background: white;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 1000px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        ul.skills-grid {
-            list-style-type: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            padding: 0;
-        }
-        ul.skills-grid li a {
-            text-decoration: none;
-            color: #2a2a2a;
-            font-weight: bold;
-            background: #e6f0ff;
-            padding: 10px;
-            border-radius: 8px;
-            display: block;
-            text-align: center;
-        }
-        .project-card-container, .card-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        .project-card, .contact-card {
-            background: #f9f9f9;
-            border-left: 5px solid #4b6cb7;
-            border-radius: 10px;
-            padding: 1rem 1.5rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            text-align: center;
-        }
-        .project-card:hover, .contact-card:hover {
-            transform: scale(1.02);
-        }
-        .project-card h3 {
-            margin-top: 0;
-            color: #222;
-        }
-        .project-card p, .contact-card p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        .project-card a, .contact-card a {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: #4b6cb7;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project-card a:hover, .contact-card a:hover {
-            text-decoration: underline;
-        }
-        .connect-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            color: #000000;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            margin-top: 10px;
-            border: 2px solid #000000;
-        }
-
-        .connect-btn:hover {
-            background-color: #f0f0f0;
-            color: #000000;
-        }
-
-        ion-icon {
-            vertical-align: middle;
-            margin-right: 6px;
-            color: #4b6cb7;
+    
+     <style>
+        html {
+            scroll-behavior: smooth; /* CHANGE: Enables smooth scrolling */
         }
     </style>
 </head>
 <body>
+
+ <!-- Sidebar -->
+ <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2>Menu</h2>
+        <button id="closeSidebar">✖</button>
+    </div>
+    <nav>
+        <a href="#skills">🧠 Skills</a>
+        <a href="#core">📘 Core Subjects</a>
+        <a href="#projects">📂 Projects</a>
+        <a href="#leetcode">💻 LeetCode & Codeforces</a>
+        <a href="#resume">📄 Resume</a>
+        <a href="#connect">📬 Connect</a>
+        <a href="#certifications">🎓 Certifications</a>
+    </nav>
+</aside>
+
+<!-- Sidebar Toggle Button -->
+<button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
     <header>
         <div class="profile-card">
             <img src="{{ url_for('static', filename='himanshu.jpg') }}" alt="Himanshu Kumar">
@@ -144,7 +44,7 @@
         </div>
     </header>
 
-    <section>
+    <section id="skills">
         <h2>🧠 Skills</h2>
         <ul class="skills-grid">
             <li><a href="https://docs.python.org/3/" target="_blank">Python</a></li>
@@ -162,7 +62,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="core">
         <h2>📘 Core Subjects (GATE)</h2>
         <ul class="skills-grid">
             <li><a href="#">DSA</a></li>
@@ -178,7 +78,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="projects">
         <h2>📂 Projects</h2>
         <div class="project-card-container">
             <div class="project-card">
@@ -213,7 +113,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="leetcode">
         <h2><ion-icon name="barbell-outline"></ion-icon> LeetCode & Codeforces</h2>
         <div class="card-section">
             <div class="contact-card">
@@ -229,7 +129,7 @@
 
     
 
-    <section>
+    <section id="resume">
         <h2><ion-icon name="document-text-outline"></ion-icon> Resume</h2>
         <div class="card-section">
             <div class="contact-card">
@@ -239,7 +139,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="connect">
         <h2>📬 Connect with Me</h2>
         <div class="card-section">
             <div class="contact-card">
@@ -261,7 +161,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="certifications">
         <h2><ion-icon name="school-outline"></ion-icon> Certifications</h2>
         <div class="card-section">
             <div class="contact-card">
@@ -272,6 +172,30 @@
             </div>
         </div>
     </section>
+
     
+        
+
+<!-- CHANGE: Added JS for sidebar toggle and smooth close on click -->
+<script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const closeBtn = document.getElementById('closeSidebar');
+    const navLinks = document.querySelectorAll('.sidebar nav a');
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active'); // Close sidebar on link click
+        });
+    });
+</script>
 </body>
 </html>
